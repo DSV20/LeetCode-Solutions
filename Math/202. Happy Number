@@ -1,0 +1,27 @@
+/*
+question link
+
+  https://leetcode.com/problems/happy-number/
+  
+*/
+class Solution {
+    public boolean isHappy(int n) {
+        int s=0,x;
+		while(n>6)
+		{
+            x=n;
+			while(x>0)
+			{
+				int rem=x%10;
+				s=s+(int)Math.pow(rem,2);
+				x=x/10;
+			}
+			n=s;
+            s=0;
+		}
+		if(n==1)
+			return true;
+		else
+			return false;
+    }
+}
