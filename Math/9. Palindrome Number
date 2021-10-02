@@ -1,0 +1,21 @@
+/*
+question link 
+
+  https://leetcode.com/problems/palindrome-number/
+  
+*/
+class Solution {
+    public boolean isPalindrome(int x) {
+        int n=x,sum=0;
+        while(n>0)
+        {
+            int num=n%10;
+            sum=sum*10+num;
+            n=n/10;
+        }
+        if(sum==x)
+            return true;
+        else
+            return false;
+    }
+}
